@@ -227,7 +227,7 @@ function cf7_custom_form_validation($result,$tag) {
 //__________________________________________________________________________________________________		
 
 	//acceptNum
-	$acceptNumbers = array('acceptNumber1', 'acceptNumber2', 'acceptNumber3', 'acceptNumber4', 'acceptNumber5', 'acceptNumber6');
+	$acceptNumbers = array('acceptNumber', 'acceptNumber1', 'acceptNumber2', 'acceptNumber3', 'acceptNumber4', 'acceptNumber5', 'acceptNumber6');
 	
 	foreach($acceptNumbers as $acceptNumber){
 		if($name == $acceptNumber) {
@@ -248,7 +248,7 @@ function cf7_custom_form_validation($result,$tag) {
 	//__________________________________________________________________________________________________
 
 	//faxNumber
-	$faxNumbers = array('faxNumber1', 'faxNumber2', 'faxNumber3', 'faxNumber4', 'faxNumber5', 'faxNumber6');
+	$faxNumbers = array('faxNumber', 'faxNumber1', 'faxNumber2', 'faxNumber3', 'faxNumber4', 'faxNumber5', 'faxNumber6');
 	foreach($faxNumbers as $faxNum) {
 		if($name == $faxNum) {
 			$faxNumber = $_POST[$faxNum];
@@ -266,7 +266,7 @@ function cf7_custom_form_validation($result,$tag) {
 
 
 	//Only Characters	
-	$OnlyChars = array('onlyChar1', 'onlyChar2');
+	$OnlyChars = array('onlyChar', 'onlyChar1', 'onlyChar2');
 	foreach($OnlyChars as $OnlyChar){
 		if($name == $OnlyChar) {
 			$onlyChar = $_POST[$OnlyChar];
@@ -305,7 +305,7 @@ function cf7_custom_form_validation($result,$tag) {
 	+58 295416 7216
 	*/
 	
-	$phoneNumbersAll = array('validPhone1', 'validPhone2', 'validPhone3', 'validPhone4', 'validPhone5', 'validPhone6');
+	$phoneNumbersAll = array('validPhone', 'validPhone1', 'validPhone2', 'validPhone3', 'validPhone4', 'validPhone5', 'validPhone6');
 	
 	foreach($phoneNumbersAll as $validPhoneVal) {
 		if($name == $validPhoneVal) {
