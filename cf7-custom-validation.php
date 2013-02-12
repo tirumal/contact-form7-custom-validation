@@ -261,6 +261,33 @@ function cf7_custom_form_validation($result,$tag) {
 			}
 		}
 	}
+	
+//__________________________________________________________________________________________________
+
+
+	//Only Characters	
+$OnlyChars = array('onlyChar1', 'onlyChar2');
+foreach($OnlyChars as $OnlyChar){
+if($name == $OnlyChar) {
+	$onlyChar = $_POST[$OnlyChar];
+
+	if($onlyChar != '') {
+		$containsLettersOrNumbers = (preg_match('~[0-9a-z]~i', $onlyChar) > 0);
+		if(!$containsLettersOrNumbers
+		|| is_numeric($onlyChar)
+		|| strlen($onlyChar > 64) ) {
+			$result['valid'] = false;
+			$result['reason'][$name] = 'Please Enter Only Characters';
+		}
+	
+		  if(is_numeric($onlyChar)){
+			  $result['valid'] = false;
+			  $result['reason'][$name] = 'Please Enter Only Characters';
+		  }
+		}
+
+	}
+}
 
 
 //__________________________________________________________________________________________________
