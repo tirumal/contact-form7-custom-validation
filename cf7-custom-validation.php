@@ -199,32 +199,33 @@ function cf7_custom_form_validation($result,$tag) {
 	}
 	
 //__________________________________________________________________________________________________
-	
+
+//This section updated on 22nd March 2013
+// It will accept character, character + numeric value
+// It will not accept special characters
+
 	//fullName
 	$allNames = array('fullName', 'fullName1');
 	foreach($allNames as $uniNames) {
 		if($name == $uniNames) {
 			$fullName = $_POST[$uniNames];
-			
+
 				if($fullName != '') {
-					//if(!preg_match('/^(\w+([\s-]\w+)?)+$/', $fullName) || is_numeric($fullName)) {
-					$containsLettersOrNumbers = (preg_match('~[0-9a-z]~i', $fullName) > 0);
-					if(!$containsLettersOrNumbers
-					|| is_numeric($fullName)
-					|| strlen($fullName > 64) ) {
+					if(!preg_match('/^[A-Z0-9][a-zA-Z0-9 ]+$/i', $fullName)) {
 						$result['valid'] = false;
 						$result['reason'][$name] = 'Please Enter a Valid Name';
 					}
-				
+					
 					if(is_numeric($fullName)){
 						$result['valid'] = false;
 						$result['reason'][$name] = 'Please Enter a Valid Name';
 					}
 				}
-			
+
 		}
 	}
 //__________________________________________________________________________________________________		
+		
 
 	//acceptNum
 	$acceptNumbers = array('acceptNumber', 'acceptNumber1', 'acceptNumber2', 'acceptNumber3', 'acceptNumber4', 'acceptNumber5', 'acceptNumber6');
