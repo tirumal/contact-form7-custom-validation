@@ -11,6 +11,8 @@ Please note that this is not a plugin. You need to include this file in your the
 function.
 
 include("cf7-custom-validation.php");
+
+More information on this post: http://code-tricks.com/contact-form-7-custom-validation-in-wordpress/
 */
 //url regex
 function get_valid_url( $url ) {
