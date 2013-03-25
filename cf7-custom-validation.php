@@ -1,5 +1,17 @@
 <?php
+/*
+File: Contact Form 7 Custom Validation
+Author: Tirumal
+Website: http://www.code-tricks.com
+Description: This file, when included in functions.php of WordPress theme extends the contact form 7 data validations.
+Such as date, email, phone number, zip codes etc. You can also extend the validations just by providing new names and 
+respective validaton rules either conditional or reg expressive.
 
+Please note that this is not a plugin. You need to include this file in your theme's functions.php using PHP include()
+function.
+
+include("cf7-custom-validation.php");
+*/
 //url regex
 function get_valid_url( $url ) {
  
