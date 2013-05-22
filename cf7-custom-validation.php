@@ -280,7 +280,7 @@ function cf7_custom_form_validation($result,$tag) {
 //__________________________________________________________________________________________________
 
 	//Agreement fields with the expected values. Ex. write ,,yes" to agree
-	$agreement = array('agreement','agreement1','agreement2')
+	$agreement = array('agreement','agreement1','agreement2');
 	$expectedValues = array('yes', 'Yes', 'YES');
 	foreach ($agreement as $a => $aValue) {
 		if($name == $aValue) {
@@ -293,7 +293,7 @@ function cf7_custom_form_validation($result,$tag) {
 				}
 			}
 		}
-	}
+	 }
 
 //__________________________________________________________________________________________________
 
