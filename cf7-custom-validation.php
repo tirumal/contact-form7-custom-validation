@@ -276,7 +276,25 @@ function cf7_custom_form_validation($result,$tag) {
 			}
 		}
 	}
-	
+
+//__________________________________________________________________________________________________
+
+	//Agreement fields with the expected values. Ex. write ,,yes" to agree
+	$agreement = array('agreement','agreement1','agreement2')
+	$expectedValues = array('yes', 'Yes', 'YES');
+	foreach ($agreement as $a => $aValue) {
+		if($name == $aValue) {
+			foreach ($expected_values as $i => $eValue) {
+				if($eValue == $_POST[$name]) {
+						$result['valid'] = true; break;
+				} else {
+					$result['valid'] = false;
+					$result['reason'][$name] = 'You did not agree with the terms';
+				}
+			}
+		}
+	}
+
 //__________________________________________________________________________________________________
 
 
